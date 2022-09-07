@@ -1,6 +1,6 @@
 <?php
 
-class User1
+class User
 {
     const FIELDS = [
         'id',
@@ -20,9 +20,9 @@ class User1
     public function add(string $email, string $password, ?string $name = NULL): void
     {
         $this->repository->create([
-            'email'=> $email,
+            'email'=> trim($email),
             'password'=> md5($password),
-            'name'=> $name ?:NULL,
+            'name'=> trim($name ?:NULL),
         ]);
     }
 

@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <link rel="icon" type="image/x-icon" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-$END$
+<section class="log-in">
+    <a href="index.php"><img src="assets/logo.svg" title="Go to main page"></a>
+    <h1>Log in your account</h1>
+    <form action="log_in.php" method="post">
+        <input type="text" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <input type="submit" value="Log in" class="btn">
+    </form>
+    <div>Don't have an account? <a href="register.php">Sing up</a></div>
+
+</section>
+
 </body>
 </html>

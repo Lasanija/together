@@ -1,9 +1,21 @@
 <?php
 
-interface FileEntities
+/**
+ * Implements CRUD
+ */
+interface RepositoryInterface
 {
- const FILENAME = '';
+    public function create(array $data);
 
- public function getKeys():array;
+    public function read(int $id);
+
+    public function readMultiple(array $filters, array $fields = []): array;
+
+    public function readAll(bool $reverse = false): array;
+
+    public function update(int $id, array $data);
+
+    public function delete(int $id);
+
 
 }
